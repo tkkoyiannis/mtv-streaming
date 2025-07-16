@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/fav.png') }}" type="image/x-icon">
+
+    <title>Aki Stream Aggregator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 Aki Personal Streamer</h1>
+        </header>
+
+        <div class="search-section">
+            <div class="search-controls">
+                <select id="mediaType">
+                    <option value="multi">All</option>
+                    <option value="movie">Movies</option>
+                    <option value="tv">TV Shows</option>
+                </select>
+                
+                <div class="search-input-container">
+                    <input type="text" id="searchInput" placeholder="Search for movies or TV shows...">
+                    <div id="suggestions" class="suggestions"></div>
+                </div>
+                
+                <button id="searchBtn">Search</button>
+            </div>
+        </div>
+
+        <!-- Random Suggestions Section -->
+        <div class="suggestions-section">
+            <h2>🎭 Discover Something New</h2>
+            <div class="genre-tabs">
+                <button class="genre-tab active" data-genre="trending">🔥 Trending</button>
+                <button class="genre-tab" data-genre="action">⚡ Action</button>
+                <button class="genre-tab" data-genre="comedy">😄 Comedy</button>
+                <button class="genre-tab" data-genre="drama">🎭 Drama</button>
+                <button class="genre-tab" data-genre="horror">👻 Horror</button>
+                <button class="genre-tab" data-genre="sci-fi">🚀 Sci-Fi</button>
+            </div>
+            <div id="randomSuggestions" class="random-suggestions">
+                <!-- Suggestions will be loaded here -->
+            </div>
+        </div>
+
+        <div id="searchResults" class="search-results"></div>
+        
+        <div id="episodeSelector" class="episode-selector" style="display: none;">
+            <div class="selector-row">
+                <label for="seasonSelect">Season:</label>
+                <select id="seasonSelect"></select>
+                
+                <label for="episodeSelect">Episode:</label>
+                <select id="episodeSelect"></select>
+            </div>
+        </div>
+
+        <div id="sourceSelector" class="source-selector" style="display: none;">
+            <h3>Available Servers:</h3>
+            <div id="sources" class="sources"></div>
+        </div>
+
+        <div id="videoContainer" class="video-container" style="display: none;">
+            <div class="video-header">
+                <h3 id="videoTitle">Now Playing</h3>
+                <div class="video-controls">
+                    <button id="fullscreenBtn">Fullscreen</button>
+                    <button id="subtitleBtn">Subtitles</button>
+                </div>
+            </div>
+            <iframe id="videoPlayer" allowfullscreen></iframe>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
+    <footer style="text-align: center; padding: 1rem; margin-top: 2rem; font-size: 0.9rem; color: #f0f0f0;">
+        <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+        <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">
+            <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_long_1-8ba2ac31f354005783fab473602c34c3f4fd207150182061e425d366e4f34596.svg" alt="TMDB Logo" style="height: 20px; margin-top: 0.5rem;" />
+        </a>
+    </footer>
+</body>
+</html>
