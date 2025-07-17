@@ -6,11 +6,11 @@ load_dotenv()
 
 # TMDb API Configuration
 # Get your free API key from https://www.themoviedb.org/settings/api
-TMDB_API_KEY = os.getenv("TMDB_API_KEY", "fbf8fc07c5bfb528c7c7f0586b02875c")
+TMDB_API_KEY = os.getenv("TMDB_API_KEY", "your_tmdb_api_key_here")
 
 # Flask Configuration
 DEBUG = os.getenv("DEBUG", "True").lower() == "true"
-SECRET_KEY = os.getenv("SECRET_KEY", "774c0120884545abb008deb6c593cf3c")
+SECRET_KEY = os.getenv("SECRET_KEY", "your_flask_secret_key")
 
 # Server Configuration
 HOST = os.getenv("HOST", "0.0.0.0")
