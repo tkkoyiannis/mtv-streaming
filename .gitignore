@@ -1,0 +1,81 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+*.pyo
+*.pyd
+*.pdb
+.Python
+*.sqlite3
+
+# Environments
+.env
+.venv/
+venv/
+ENV/
+env/
+*.env
+*.env.*
+
+# Flask
+instance/
+config.py
+config.json
+
+# JS/Web
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# VSCode/IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build / Distribution
+build/
+dist/
+*.tgz
+*.tar.gz
+
+# Docker
+*.container
+*.log
+docker-compose.override.yml
+
+# PyInstaller
+*.spec
+
+# Coverage reports
+.coverage
+htmlcov/
+.coverage.*
+
+# Test output
+.pytest_cache/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# Static assets
+*.bak
+*.swp
+*.tmp
+*.cache
+
+# Custom folders
+*.pid
+*.db
+*.log
+*.sqlite
